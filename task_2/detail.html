@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Pendaftar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Detail Informasi Pendaftar</h1>
+    <table>
+      <tr>
+        <th>Nama</th>
+        <td id="nama"></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td id="email"></td>
+      </tr>
+      <tr>
+        <th>Telepon</th>
+        <td id="telepon"></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    // Mengambil data dari query string URL
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('nama').textContent = params.get('nama');
+    document.getElementById('email').textContent = params.get('email');
+    document.getElementById('telepon').textContent = params.get('telepon');
+  </script>
+</body>
+</html>
